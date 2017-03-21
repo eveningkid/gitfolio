@@ -1,0 +1,36 @@
+@import '../style/_colors';
+
+.RepoBlock {
+  border: 2px solid $primary;
+  padding: 2em;
+  height: 80px;
+  max-width: 200px;
+  min-width: 200px;
+  text-align: center;
+  margin-right: .5em;
+  word-break: break-word;
+
+  &:hover {
+    border-style: dashed;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 18px;
+    border-bottom: 2px solid $primary;
+    display: inline-block;
+    padding-bottom: 2px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    padding-top: 15px;
+  }
+
+  em {
+    font-style: normal;
+    background-color: #eee;
+    color: #555;
+  }
+}

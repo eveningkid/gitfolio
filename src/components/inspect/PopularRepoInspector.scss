@@ -1,0 +1,39 @@
+@import './_ElementInspector';
+
+.PopularRepoInspector {
+  top: -160px;
+  height: 130px;
+  left: -15px;
+  right: -15px;
+
+  &.hidden {
+    top: -125px;
+  }
+
+  ul {
+    li {
+      &.selected {
+        background-color: #eee;
+      }
+
+      &:active {
+        background-color: #ddd;
+      }
+      
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .name {
+        font-weight: 700;
+      }
+
+      .star-count {
+        float: right;
+        color: #888;
+        font-weight: 700;
+      }
+    }
+  }
+}

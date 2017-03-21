@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #fff;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .WelcomeForm {
+    p {
+      font-size: 14px !important;
+    }
+
+    input {
+      font-size: 16px !important;
+    }
+  }
+
+  .GenerateCode {
+    text-align: center;
+  }
+
+  .UserCard {
+    max-width: 230px !important;
+
+    h1 {
+      font-size: 14px !important;
+    }
+
+    h2 {
+      font-size: 13px !important;
+    }
+  }
+
+  .CanEdit {
+    top: 25px !important;
+  }
+
+  .RepoSlider {
+    .filter {
+      font-size: 14px !important;
+
+      input {
+        width: 60px !important;
+      }
+    }
+  }
+
+  .Phrase {
+    padding: 4em 0 !important;
+
+    h1 {
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      line-height: 24px !important;
+    }
+  }
+
+  .PopularRepo {
+    max-width: 210px;
+    padding: 13px !important;
+
+    .CanEdit {
+      top: -35px !important;
+    }
+
+    h1 {
+      font-size: 15px !important;
+    }
+
+    p {
+      font-size: 12px !important;
+    }
+  }
+
+  .PersonalPhraseInspector {
+    top: 25px !important;
+  }
+
+  .LanguagesListInspector {
+    top: -70px !important;
+  }
+
+  .ReachMe {
+    button {
+      font-size: 15px !important;
+    }
+
+    span {
+      margin: 0 !important;
+      margin-top: 25px !important;
+      display: block !important;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import './style/_colors';
+
+.GenerateCode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: .4;
+  transition: all 1s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.hidden {
+    opacity: 0;
+    top: 10px;
+  }
+
+  button, span {
+    border: 0;
+    background-color: transparent;
+    padding: 8px;
+    color: #555;
+    outline: none;
+    font-size: 10px;
+
+    &:hover {
+      text-decoration: underline;
+      color: #111;
+      cursor: pointer;
+    }
+
+    &.success {
+      color: #009688;
+    }
+
+    &.important {
+      font-weight: 700;
+    }
+  }
+
+  span {
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+      cursor: default;
+      text-decoration: none;
+    }
+  }
+}

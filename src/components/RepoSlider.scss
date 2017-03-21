@@ -1,0 +1,39 @@
+@import '../style/_layout';
+
+.RepoSlider {
+  .repos {
+    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+    padding-bottom: 20px;
+    min-height: 148px;
+  }
+
+  .no-repo-found {
+    text-align: center;
+    width: 100%;
+    max-width: $maxWidthContainer;
+    margin: auto;
+    line-height: 142px;
+    color: #949494;
+    border: 3px solid #eee;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .filter {
+    margin-bottom: 40px;
+  }
+
+  input {
+    border: 0;
+    border-bottom: 2px dashed #eee;
+    width: 100px;
+    font-weight: 700;
+    color: #555;
+    padding: .8em 0;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+  }
+}

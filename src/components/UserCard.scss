@@ -1,0 +1,66 @@
+@import '../style/_colors';
+
+.UserCard {
+  border: 1px solid #ddd;
+  text-align: justify;
+  max-width: 250px;
+  height: 80px;
+  margin: auto;
+  border-radius: 3px;
+  position: relative;
+  box-shadow: 5px 5px #eee;
+
+  &::after, &::before {
+    position: absolute;
+    content: ' ';
+    border: 2px solid $secondary;
+    border-radius: 10px;
+  }
+
+  &::after {
+    top: -20px;
+    right: -30px;
+    width: 28px;
+    transform: rotate(-50deg);
+  }
+
+  &::before {
+    top: -23px;
+    right: -8px;
+    width: 17px;
+    transform: rotate(-75deg);
+  }
+
+  img {
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    margin-right: 20px;
+    float: left;
+    border-radius: 3px;
+  }
+
+  h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    padding-top: 19px;
+    font-size: 16px;
+    font-weight: 700;
+
+    a {
+      color: #555;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 2px solid $secondary;
+    }
+  }
+
+  h2 {
+    font-weight: 500;
+    margin: 0;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
+  }
+}

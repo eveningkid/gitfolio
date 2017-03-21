@@ -1,0 +1,36 @@
+@import './_ElementInspector';
+
+.PersonalPhraseInspector {
+  top: 60px;
+  height: 30px;
+  width: 250px;
+  left: 50%;
+  margin-left: -125px;
+
+  &.hidden {
+    top: 55px;
+  }
+
+  .tabs {
+    display: flex;
+
+    .tab {
+      flex: 1;
+      text-align: center;
+
+      &:hover:not(.unavailable), &:active {
+        cursor: pointer;
+        background-color: #eee;
+      }
+
+      &.selected {
+        text-decoration: underline;
+      }
+
+      &.unavailable {
+        color: #aaa;
+        text-decoration: line-through;
+      }
+    }
+  }
+}

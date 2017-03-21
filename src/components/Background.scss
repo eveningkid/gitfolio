@@ -1,0 +1,15 @@
+@import '../style/_colors';
+@import '../style/_layout';
+
+.Background {
+  border-top: 3px dashed $secondary;
+  max-width: $maxWidthContainer;
+  padding-top: 40px;
+  margin: -40px auto auto auto;
+
+  strong {
+    background-color: $primary;
+    padding: 0 10px;
+    color: #fff;
+  }
+}

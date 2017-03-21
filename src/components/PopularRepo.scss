@@ -1,0 +1,46 @@
+@import '../style/_colors';
+
+.PopularRepo {
+  position: relative;
+  max-width: 250px;
+  padding: 25px;
+  text-align: left;
+  margin: auto;
+  border: 7px double #eee;
+  border-radius: 3px;
+  border-bottom-color: $secondary;
+  border-left-color: $secondary;
+  background-color: #fff;
+
+  h1 {
+    margin: 0;
+    font-size: 18px;
+    border-bottom: 2px solid $secondary;
+    display: inline-block;
+    padding-bottom: 2px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    padding-top: 15px;
+    word-break: break-word;
+  }
+
+  .metadata {
+    float: right;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #888;
+    margin-left: 10px;
+
+    &.star-count {
+
+    }
+
+    &.forks-count {
+
+    }
+  }
+}

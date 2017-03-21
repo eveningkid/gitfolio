@@ -1,0 +1,23 @@
+@import './_ElementInspector';
+
+.LanguagesListInspector {
+  top: -30px;
+  height: 125px;
+  width: 150px;
+  left: 50%;
+  margin-left: -75px;
+
+  &.hidden {
+    top: -25px;
+  }
+
+  input[type='checkbox'] {
+    margin-right: 10px;
+  }
+
+  input[type='text'] {
+    outline: none;
+    border: 0;
+    padding: 2px;
+  }
+}

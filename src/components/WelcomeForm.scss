@@ -1,0 +1,119 @@
+@import '../style/_layout';
+@import '../style/_colors';
+
+.WelcomeForm {
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+  transition: all .25s;
+
+  .fetching {
+    position: absolute;
+    z-index: 2;
+    width: 200px;
+    margin: auto;
+    top: 100px;
+    left: 50%;
+    margin-left: -110px;
+    background-color: #fff;
+    padding: 10px;
+    border: 3px solid #eee;
+    border-radius: 0 0 4px 4px;
+    border-bottom-color: $primary;
+    font-size: 14px;
+    transition: all .25s;
+
+    &::after {
+      content: ' ···';
+      color: $primary;
+      font-family: 'Bitter', serif;
+      animation: fetching 1s infinite;
+    }
+
+    &.hidden {
+      top: 95px;
+      opacity: 0;
+    }
+  }
+
+  form {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: all .25s;
+
+    &.hidden {
+      opacity: 0;
+    }
+
+    #logo {
+      background-image: url('/img/gitfolio-logo.png');
+      background-repeat: no-repeat;
+      background-size: 143px 61px;
+      font-size: 52px;
+      height: 61px;
+      width: 143px;
+      margin: auto;
+      background-position: center;
+      border-bottom: 4px solid $secondary;
+    }
+
+    p {
+      font-size: 16px;
+      font-family: 'Bitter', serif;
+      line-height: 24px;
+      margin: 40px 0;
+    }
+
+    input[type='text'] {
+      border: 2px solid $primary;
+      padding: 8px;
+      font-size: 18px;
+      outline: none;
+      height: 18px;
+      vertical-align: top;
+
+      &:active {
+        border-color: $dark-primary;
+      }
+    }
+
+    input[type='submit'] {
+      border: 0;
+      background-color: transparent;
+      font-size: 18px;
+      line-height: 38px;
+      outline: none;
+      margin-left: 5px;
+      padding-left: 0;
+      vertical-align: top;
+      transition: all .3s;
+
+      &:hover:not(:disabled) {
+        padding-left: 7px;
+        color: $primary;
+        cursor: pointer;
+      }
+
+      &:disabled {
+        color: #eee;
+      }
+    }
+  }
+
+  .error {
+    color: orange;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 300px;
+
+    a {
+      text-decoration: underline !important;
+    }
+  }
+}
+
+@keyframes fetching {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
