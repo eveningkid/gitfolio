@@ -13,32 +13,19 @@ const mapStateToProps = state => {
 const ReachMe = ({ user }) => {
   const { email, hireable, login } = user;
 
-  const mailtoAddress = `mailto:${email}?subject=I checked your portfolio and...`;
+  const mailToAddress = `mailto:${email}?subject=I checked your portfolio and...`;
   const profile = `https://github.com/${login}/`;
 
   return (
     <div className="ReachMe">
-      {email == null ? (
-        <a href={profile}>
-          <button>why not getting in touch?</button>
-        </a>
-      ) : (
-        <a href={mailtoAddress}>
-          <button>why not getting in touch?</button>
-        </a>
-      )}
+      <a href={email === null ? profile : mailToAddress}>
+        Why not getting in touch?
+      </a>
 
       {email !== null ? (
         <span>
-          {hireable ? (
-            <span>
-              plus, I'm now <a href={mailtoAddress}>hireable</a>
-            </span>
-          ) : (
-            <span>
-              I could soon be <a href={mailtoAddress}>hireable</a>
-            </span>
-          )}
+          {hireable ? "plus I'm now" : "I could soon be"}{" "}
+          <a href={mailToAddress}>hireable</a>
         </span>
       ) : (
         <span>
