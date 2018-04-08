@@ -19,7 +19,9 @@ const ReachMe = ({ user }) => {
   return (
     <div className="ReachMe">
       <a href={email === null ? profile : mailToAddress}>
-        Why not getting in touch?
+        <button>
+          Why not getting in touch?
+        </button>
       </a>
 
       {email !== null ? (
