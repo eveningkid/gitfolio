@@ -24,5 +24,4 @@ The main missing feature here would be a way to change the project's primary/sec
 
 `npm run start` will launch the development server, `npm run build` will update the `build` folder with a static version of the project.
 
-> Note: I didn't figure out how to generate a separate css file for every .scss file in this project using webpack.
-> Here's the reason why you must have noticed the gulp build file. **After building the project, you'll need to manually include a `link` tag for the `/build/static/css/all.min.css` stylesheet inside the `head` part of `index.html`.**
+> Note: all styles are minified in a single file.
