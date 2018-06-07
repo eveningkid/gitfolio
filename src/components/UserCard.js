@@ -11,16 +11,9 @@ const mapStateToProps = (state) => {
   }
 }
 
-const UserCard = ({user}) => {
-  const {
-    avatar_url,
-    html_url,
-    location,
-    login,
-    name,
-  } = user
-
-  return (
+const UserCard = ({
+  user: { avatar_url, html_url, location, login, name }
+}) => (
     <div className="UserCard">
       <img
         src={avatar_url}
@@ -36,6 +29,6 @@ const UserCard = ({user}) => {
       <h2>{truncate(location, {length: 17})}</h2>
     </div>
   )
-}
+
 
 export default connect(mapStateToProps)(UserCard)

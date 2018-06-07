@@ -79,7 +79,7 @@ const RepoSlider = React.createClass({
           )}
         </div>
 
-        {!session.isGenerating ? (
+        {!session.isGenerating && (
           <div className="filter">
             Only show the
 
@@ -93,7 +93,7 @@ const RepoSlider = React.createClass({
 
             most popular repos.
           </div>
-        ) : null}
+        )}
 
         {/*<div>
           <input

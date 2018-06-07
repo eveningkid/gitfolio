@@ -6,9 +6,9 @@ import {editSession} from '../../actions'
 import './PersonalPhraseInspector.scss'
 
 const mapStateToProps = (state) => {
+  const { user, session } = state
   return {
-    user: state.user,
-    session: state.session,
+    user, session,
   }
 }
 

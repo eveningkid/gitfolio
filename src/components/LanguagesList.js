@@ -48,11 +48,11 @@ const LanguagesList = React.createClass({
           }}
         />
 
-        {!isGenerating ? (
+        {!isGenerating && (
           <LanguagesListInspector
             isEditing={isEditing}
           />
-        ) : null}
+        )}
 
         <Phrase text={`I built all these using ${languages.join(', ')}!`} />
       </div>
