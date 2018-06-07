@@ -34,6 +34,9 @@
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.1.0",
     "gzip-size": "3.0.0",
+    "gulp-hash": "4.2.2",
+    "gulp-rename": "1.2.3",
+    "gulp-replace": "1.0.0",
     "html-webpack-plugin": "2.24.0",
     "http-proxy-middleware": "0.17.3",
     "i": "^0.3.5",
@@ -78,7 +81,8 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js && gulp sass",
+    "build": "node scripts/build.js && gulp htmlreplace",
+    "css": "gulp htmlreplace",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
