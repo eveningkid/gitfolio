@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 
 import "./ReachMe.scss";
 
-const mapStateToProps = state => {
-  const { user, login } = state;
+const mapStateToProps = ({ user, login }) => {
+
   return {
     user, login
   };
