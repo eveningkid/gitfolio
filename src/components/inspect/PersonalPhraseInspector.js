@@ -5,8 +5,8 @@ import classNames from 'classnames'
 import {editSession} from '../../actions'
 import './PersonalPhraseInspector.scss'
 
-const mapStateToProps = (state) => {
-  const { user, session } = state
+const mapStateToProps = ({ user, session }) => {
+
   return {
     user, session,
   }
