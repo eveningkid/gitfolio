@@ -144,14 +144,14 @@ const WelcomeForm = React.createClass({
             disabled={!this.state.login.length}
           />
 
-          {errorCode ? (
+          {errorCode && (
             <div className="error">
               <small>
                 An error occurred. Please verify you typed your login correctly
                 or check <SafeLink href="https://status.github.com/" target="_blank">github status</SafeLink>. (code {errorCode})
               </small>
             </div>
-          ) : null}
+          )}
         </form>
       </div>
     )

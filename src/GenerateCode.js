@@ -132,19 +132,19 @@ const GenerateCode = React.createClass({
           Generate static code
         </button>
 
-        {copied ? (
+        {copied && (
           <span className="important success">
             Copied!
           </span>
-        ) : null}
+        )}
 
-        {generatedCode ? (
+        {generatedCode && (
           <CopyToClipboard text={generatedCode} onCopy={this.copied}>
             <button className="important">
               Copy to clipboard last generated code
             </button>
           </CopyToClipboard>
-        ) : null}
+        )}
       </div>
     )
   }

@@ -58,12 +58,12 @@ const PersonalPhrase = React.createClass({
           }}
         />
 
-        {!isGenerating ? (
+        {!isGenerating && (
           <PersonalPhraseInspector
             isEditing={isEditing}
             onClick={this.toggleEditing}
           />
-        ) : null}
+        )}
 
         {this.getPhraseComponent(this.props.personalPhrase)}
       </div>

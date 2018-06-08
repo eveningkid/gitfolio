@@ -3,28 +3,29 @@ import { connect } from "react-redux";
 
 import "./ReachMe.scss";
 
-const mapStateToProps = state => {
+const mapStateToProps = ({ user, login }) => {
+
   return {
-    user: state.user,
-    login: state.login
+    user, login
   };
 };
 
-const ReachMe = ({ user }) => {
-  const { email, hireable, login } = user;
+const ReachMe = ({
+  user: { email, hireable, login }
+}) => {
 
   const mailToAddress = `mailto:${email}?subject=I checked your portfolio and...`;
   const profile = `https://github.com/${login}/`;
 
   return (
     <div className="ReachMe">
-      <a href={email === null ? profile : mailToAddress}>
+      <a href={email ? mailToAddress : profile}>
         <button>
           Why not getting in touch?
         </button>
       </a>
 
-      {email !== null ? (
+      {email ? (
         <span>
           {hireable ? "plus I'm now" : "I could soon be"}{" "}
           <a href={mailToAddress}>hireable</a>

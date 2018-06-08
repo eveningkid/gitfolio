@@ -51,12 +51,12 @@ const PopularRepo = React.createClass({
             }}
           />
 
-          {!isGenerating ? (
+          {!isGenerating && (
             <PopularRepoInspector
               isEditing={isEditing}
               onClick={this.toggleEditing}
             />
-          ) : null}
+          )}
 
           <span className="metadata forks-count">{emoji(`🔨 ${forks_count}`)}</span>
           <span className="metadata star-count">{emoji(`⭐ ${stargazers_count}`)}</span>

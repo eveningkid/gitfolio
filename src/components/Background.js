@@ -2,9 +2,9 @@ import React from 'react'
 
 import './Background.scss'
 
-const Background = (props) => (
+const Background = ({ children }) => (
   <div className="Background">
-    {props.children}
+    {children}
   </div>
 )
 
